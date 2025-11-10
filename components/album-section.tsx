@@ -1,5 +1,7 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
-import { Music, Youtube, Apple, SproutIcon as Spotify } from "lucide-react"
+import { Youtube } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function AlbumSection() {
@@ -12,9 +14,13 @@ export function AlbumSection() {
             <div className="relative group">
               <div className="absolute inset-0 bg-accent/20 rounded-lg blur-3xl group-hover:bg-accent/30 transition-all duration-500" />
               <img
-                src="/worship-album-cover-with-golden-light-and-dove.jpg"
-                alt="Latest Album"
+                src="/Access Granted.jpg"
+                alt="ACCESS GRANTED Album Flyer"
                 className="relative w-full rounded-lg shadow-2xl"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement
+                  target.src = '/worship-album-cover-with-golden-light-and-dove.jpg'
+                }}
               />
             </div>
           </ScrollReveal>
@@ -26,13 +32,13 @@ export function AlbumSection() {
                 <span className="text-accent font-semibold text-sm">LATEST ALBUM</span>
               </div>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-balance">
-                Heaven's <span className="text-accent">Atmosphere</span>
+                ACCESS <span className="text-accent">GRANTED</span>
               </h2>
-              <p className="text-xl text-accent font-semibold">2024</p>
+              <p className="text-xl text-accent font-semibold">2025</p>
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                An invitation into the throne room of grace. Heaven's Atmosphere is a collection of worship anthems that
-                create space for encounter with the living God. Each song is a declaration of His majesty and an
-                invitation to experience His presence in a fresh way.
+                A powerful collection of worship songs that grant access to the presence of God. This album opens the door
+                to divine encounters and authentic worship experiences that transform hearts and draw believers closer to the
+                throne of grace.
               </p>
 
               {/* Streaming Platforms */}
@@ -41,38 +47,31 @@ export function AlbumSection() {
                   size="lg"
                   variant="outline"
                   className="gap-2 bg-transparent hover:bg-accent hover:text-accent-foreground"
+                  asChild
                 >
+                  <a href="https://youtube.com/@jerdanparadise?si=nRT8oWXiHcTS_QIo" target="_blank" rel="noopener noreferrer">
                   <Youtube className="w-5 h-5" />
                   YouTube
+                  </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="gap-2 bg-transparent hover:bg-accent hover:text-accent-foreground"
+                  asChild
                 >
-                  <Apple className="w-5 h-5" />
-                  Apple Music
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="gap-2 bg-transparent hover:bg-accent hover:text-accent-foreground"
-                >
-                  <Spotify className="w-5 h-5" />
-                  Spotify
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="gap-2 bg-transparent hover:bg-accent hover:text-accent-foreground"
-                >
-                  <Music className="w-5 h-5" />
-                  Amazon
+                  <a href="https://youtube.com/@jerdanparadise827?si=_rrWzPW6oSmm0tSp" target="_blank" rel="noopener noreferrer">
+                    <Youtube className="w-5 h-5" />
+                    YouTube 2
+                  </a>
                 </Button>
               </div>
 
-              <Button className="w-full lg:w-auto bg-accent text-accent-foreground hover:bg-accent/90">
-                View All Albums
+              <Button 
+                className="w-full lg:w-auto bg-accent text-accent-foreground hover:bg-accent/90"
+                asChild
+              >
+                <a href="/music">View All Albums</a>
               </Button>
             </div>
           </ScrollReveal>

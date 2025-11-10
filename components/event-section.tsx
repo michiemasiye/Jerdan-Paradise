@@ -29,11 +29,22 @@ export function EventSection() {
             <div className="flex flex-wrap justify-center gap-6 pt-4">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Calendar className="w-5 h-5 text-accent" />
-                <span>December 15, 2024</span>
+                <span>Saturday, December 15, 2024 at 7:00 PM</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-accent" />
-                <span>City Convention Center</span>
+                <span>City Convention Center, Main Auditorium</span>
+              </div>
+            </div>
+            
+            <div className="pt-6 space-y-3">
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                This powerful worship encounter will feature prophetic worship, ministry time, and an opportunity to experience God's presence in a fresh way. Doors open at 6:00 PM. Early arrival recommended.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+                <span>• Free Admission</span>
+                <span>• Open to All Ages</span>
+                <span>• Parking Available</span>
               </div>
             </div>
 

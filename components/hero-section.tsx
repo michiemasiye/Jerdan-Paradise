@@ -39,26 +39,39 @@ export function HeroSection() {
             experiences that transform lives.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              Watch Latest
+            <Button 
+              size="lg" 
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+              asChild
+            >
+              <a href="#videos">Watch Latest</a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+              asChild
             >
-              Explore Music
+              <a href="/music">Explore Music</a>
             </Button>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <a 
+        href="#about"
+        onClick={(e) => {
+          e.preventDefault()
+          document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+        }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer hover:scale-110 transition-transform"
+        aria-label="Scroll to next section"
+      >
         <div className="w-6 h-10 border-2 border-accent rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-accent rounded-full animate-pulse" />
         </div>
-      </div>
+      </a>
     </section>
   )
 }

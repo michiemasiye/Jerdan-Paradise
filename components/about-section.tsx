@@ -42,7 +42,12 @@ export function AboutSection() {
                   worship is not just a song but a lifestyle of surrender and devotion to Jesus Christ.
                 </p>
               </div>
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90">More About Jerdan</Button>
+              <Button 
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+                asChild
+              >
+                <a href="/about">More About Jerdan</a>
+              </Button>
             </div>
           </ScrollReveal>
         </div>

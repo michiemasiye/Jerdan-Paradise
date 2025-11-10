@@ -9,9 +9,8 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-primary via-primary/90 to-secondary overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1600')] bg-cover bg-center opacity-10" />
-        <div className="container mx-auto px-6 py-32 relative z-10">
+      <section className="relative flex items-center justify-center bg-gradient-to-br from-primary via-primary/90 to-secondary overflow-hidden min-h-[60vh] md:min-h-[70vh]">
+        <div className="container mx-auto px-6 py-24 md:py-32 text-center space-y-6">
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold text-center mb-6">About Minister Jerdan Paradise</h1>
             <p className="text-xl md:text-2xl text-center text-foreground/90 max-w-3xl mx-auto">
@@ -56,6 +55,34 @@ export default function AboutPage() {
                     Through music, teaching, and ministry, he continues to impact lives and draw believers closer to the
                     heart of God.
                   </p>
+                </div>
+                
+                {/* Additional Information */}
+                <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-border">
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Ministry Experience</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Over 15 years of leading worship across continents, ministering in churches, conferences, and revival meetings.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Musical Background</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Trained in worship ministry and music production, with a passion for creating songs that usher in God's presence.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Vision</h3>
+                    <p className="text-sm text-muted-foreground">
+                      To raise up a generation of true worshippers who worship in spirit and truth, transforming nations through worship.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Calling</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Called to prophetic worship and creating atmospheres where the Holy Spirit can move freely and transform lives.
+                    </p>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>

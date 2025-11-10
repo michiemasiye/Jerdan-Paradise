@@ -52,15 +52,17 @@ export function Navigation() {
           </div>
 
           {/* Center Logo */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JP%20Logo-78ciYDM8mC7ciXIG4m9A81reEhYlJN.png"
-              alt="Jerdan Paradise Logo"
-              width={120}
-              height={60}
-              className="h-12 w-auto"
-              priority
-            />
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2 z-10">
+            <div className="bg-background/95 backdrop-blur-sm px-3 py-2 rounded-lg border border-accent/20 shadow-lg">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JP%20Logo-78ciYDM8mC7ciXIG4m9A81reEhYlJN.png"
+                alt="Jerdan Paradise Logo"
+                width={150}
+                height={75}
+                className="h-16 w-auto"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Right Navigation */}
